@@ -1,6 +1,6 @@
 ## ReduxStoreProvider
 
-[![npm](https://img.shields.io/npm/v/@sanonz/paginator.svg)](https://www.npmjs.com/package/@sanonz/paginator) ![Github file size](https://img.shields.io/github/size/sanonz/@sanonz/paginator/dist/paginator.umd.min.js.svg) ![npm](https://img.shields.io/npm/dw/@sanonz/paginator.svg)
+[![npm](https://img.shields.io/npm/v/@sanonz/vue-paginator.svg)](https://www.npmjs.com/package/@sanonz/vue-paginator) ![Github file size](https://img.shields.io/github/size/sanonz/@sanonz/vue-paginator/dist/paginator.umd.min.js.svg) ![npm](https://img.shields.io/npm/dw/@sanonz/vue-paginator.svg)
 
 Vue 简约分页插件，整个组件代码只有 100 多行，非常精简，此组建的诞生是有洁癖症患者的福音。
 
