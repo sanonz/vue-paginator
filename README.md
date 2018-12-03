@@ -81,4 +81,4 @@ npm install @sanonz/vue-paginator --save
 
 ## 例子
 
-[https://sanonz.github.io/vue-paginator/exmaples/](https://sanonz.github.io/vue-paginator/exmaples/)
+[https://sanonz.github.io/vue-paginator/examples/](https://sanonz.github.io/vue-paginator/examples/)
