@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Paginator Example</title>
+  <style>
+    body{text-align:center;}
+    .paginator-wrap{display:inline-block;margin-top:100px;}
+    .paginator-wrap a{cursor:pointer;color:#2cd6ff;user-select:none}
+    .paginator{list-style-type:none;padding:0;color:#333;line-height:100%;overflow:hidden;border:1px solid #e2e2e2;border-radius:4px;}
+    .paginator-item{float:left;border-right:1px solid #e2e2e2;}
+    .paginator-item:last-child{border-right:none;}
+    .paginator-active{background-color:#f3f3f3;}
+    .paginator-row{display:block;padding:6px 12px;}
+  </style>
+</head>
+<body>
+  
+  <div id="root">
+    <router-view></router-view>
+  </div>
+
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+  <script src="../dist/paginator.umd.min.js"></script>
+
+  <script>
+    var App = {
+      components: {Paginator},
+      data: function() {
+        return {
+          page: ~~this.$route.query.page || 50,
+        };
+      },
+      template: `
+        <div class="paginator-wrap">
+          <paginator
+            :range="2"
+            :page="page"
+            :size="20"
+            :total="2000"
+            prevText="Prev"
+            nextText="Next"
+            @change="onPageChange"
+          />
+        </div>
+      `,
+      methods: {
+        onPageChange(page) {
+          this.page = page;
+        },
+      },
+    };
+    Vue.use(VueRouter);
+    var router = new VueRouter({
+      routes: [
+        {path: '*', component: App},
+      ],
+      mode: 'history',
+    });
+    var setup = new Vue({router}).$mount('#root');
+  </script>
+</body>
+</html>
